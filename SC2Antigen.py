@@ -35,7 +35,7 @@ virus_protein = ["ORF1ab-protein","S-protein","ORF3a-protein","E-protein","M-pro
 if thread:
     thread=min(os.cpu_count(), thread);
 else:
-    thread=4; # defualt thread number setting as 4
+    thread=8; # defualt thread number setting as 4
 
 if pepLen:
     pepLen_list= pepLen.split(',');
