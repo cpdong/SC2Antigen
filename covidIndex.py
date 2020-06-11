@@ -1,7 +1,7 @@
 import argparse,os;
 import pandas as pd;
 from os.path import dirname, abspath
-dir = dirname(dirname(abspath(__file__)));# get parent dir of the scripts
+scriptDir = dirname(abspath(__file__));# get parent dir of the scripts
 # =============================================================================
 # initial setting for future update
 # =============================================================================
@@ -24,10 +24,10 @@ basename, ext = os.path.splitext(filename)
 virus_protein = ["ORF1ab-protein","S-protein","ORF3a-protein","E-protein","M-protein","ORF6-protein",
 "ORF7a-protein","ORF7b-protein","ORF8-protein","N-protein","ORF10-protein"]
 
-netMHC_result= ddir + '/data/SARS-COV2-pMHC-I_9mer_result.txt.gz'
+netMHC_result= scriptDir + '/data/SARS-COV2-pMHC-I_9mer_result.txt.gz'
 #================================================================
 #####
-hla_ref = [l.rstrip() for l in open(allelenames)]
+hla_ref = [l.rstrip() for l in open(scriptDir + '/data/allelenames')]
 if inputHLA: #get HLA from user input
     hla_list= inputHLA.split(',')
     if 'HLA' in hla_list[0]:
