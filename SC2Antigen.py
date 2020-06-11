@@ -42,10 +42,10 @@ if pepLen:
 else:
     pepLen_list=['9']; # default using 9mer!
 
-if output[-1]=='/':
+if output[-1]=='_':
     outdir =output;
 else:
-    outdir =output + '/';
+    outdir =output + '_';
 
 # python version check
 pyversion= str(sys.version)[0]
