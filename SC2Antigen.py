@@ -1,10 +1,8 @@
-import argparse,os,re,json;
-import gzip,sys,shutil;
+import argparse,os,json;
+import sys,re;
 import pandas as pd;
 import numpy as np;
 import time,subprocess;
-import pybedtools;
-from Bio import SeqIO;
 from multiprocessing import Pool;
 from os.path import dirname, abspath
 dir = dirname(abspath(__file__));# get parent dir of the scripts
